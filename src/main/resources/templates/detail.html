@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Đỗ Công Ban</title>
+</head>
+
+<body>
+	<h1>Detail</h1>
+	<form th:action="@{/add}" th:object="${student}" method="post"> 
+		ID:
+		<input type="text" th:field="*{id}" name="id" required/><br>
+		Name:
+		<input type="text" th:field="*{name}" name="name" required/><br>
+		DOB:
+		<input type="date" th:field="*{dob}" name="dob" required/><br>
+		Department:
+		<select name="department" required>
+			<option th:value="CN09" th:field="*{department}">CN09</option>
+			<option th:value="CN10" th:field="*{department}">CN10</option>
+			<option th:value="CN11" th:field="*{department}">CN11</option>
+		</select><br>
+		<button>Confirm</button>
+		<a th:href="@{/}">Back</a>
+	</form >
+</body>
+
+</html>

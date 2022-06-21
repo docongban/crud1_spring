@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Đỗ Công Ban</title>
+</head>
+
+<body>
+	<h1>Hello</h1>
+	<form th:action="@{/add}" method="get" > 
+		
+		<h3 th:text="${error}"></h3>
+		ID:
+		<input type="text" name="id" required/><br>
+		Name:
+		<input type="text" name="name" required/><br>
+		DOB:
+		<input type="date" name="dob" required/><br>
+		Department:
+		<select name="department" required >
+			<option th:value="CN09">CN09</option>
+			<option th:value="CN10">CN10</option>
+			<option th:value="CN11">CN11</option>
+		</select><br>
+		<button>Add</button>
+		<a th:href="@{/}">Reset</a>
+	</form >
+	
+</body>
+
+</html>
